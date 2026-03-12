@@ -31,9 +31,17 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+            <Button
+  size="lg"
+  className="px-6 py-3 border-2 border-white text-white rounded-full 
+  font-semibold hover:bg-white hover:text-black transition duration-300"
+  asChild
+>
+  <Link to="/services">Explore Services</Link>
+</Button>
+            {/* <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
               <Link to="/services">Explore Services</Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

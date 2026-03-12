@@ -1,3 +1,5 @@
+// 
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +12,18 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+// import Profile from "./components/Profile";
+// import ProfileDetail from "./pages/ProfileDetail";
+import VenueDetail from "./pages/VenueDetail";
+import Venues from "./components/Venues";
+import ProfileDetail from "./pages/ProfileDetail";
+import CorporateEvents from "./pages/CorporateEvents";
+import WeddingEvents from "./pages/WeddingEvents";
+import BirthdayParties from "./pages/BirthdayParties";
+import ReceptionCatering from "./pages/ReceptionCatering";
+import OutdoorPage from "./pages/OutdoorPage";
+import Socialcon from "./components/Socialcon";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -18,7 +32,17 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter 
+        // future={{
+        //   v7_startTransition: true,
+        //   v7_relativeSplatPath: true,
+        //   v7_prependNavCurrentMatch: true,
+        //   v7_normalizeFormMethod: true,
+        //   v7_fetcherPersist: true,
+        //   v7_partialHydration: true,
+        //   v7_skipActionErrorRevalidation: true
+        // }}
+      >
         <Navbar />
         <main>
           <Routes>
@@ -26,9 +50,22 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/profile/:slug" element={<ProfileDetail/>} />
+
+            <Route path="/reception-catering" element={<ReceptionCatering />} />
+            <Route path="/outdoor-catering" element={<OutdoorPage />} />
+
+       
+        <Route path="/venues/:venueSlug" element={<VenueDetail/>} />
+        <Route path="/corporate-events" element={<CorporateEvents />} />
+        <Route path="/wedding-events" element={<WeddingEvents/>} />
+        <Route path="/birthday-parties" element={<BirthdayParties />} />
+          <Route path="/blog" element={<Blog />} />
+
+            
           </Routes>
         </main>
+        <Socialcon/>
         <Footer />
       </BrowserRouter>
     </TooltipProvider>
