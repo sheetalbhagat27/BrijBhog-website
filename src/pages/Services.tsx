@@ -7,6 +7,7 @@ import kittyImg from "@/assets/kitty-party.jpg";
 import retirementImg from "@/assets/retirement-party.jpg";
 import corporateImg from "@/assets/corporate-event.jpg";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import { useEffect } from "react";
 
 const events = [
   {
@@ -42,6 +43,9 @@ const events = [
 ];
 
 const Services = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   return (
     <>
       <section className="maroon-gradient pt-32 pb-20">
@@ -99,7 +103,7 @@ const Services = () => {
         </div>
       </section>
 
-      <WhyChooseUs />
+      
     </>
   );
 };

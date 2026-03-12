@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const ReceptionCatering = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   return (
     <div className="w-full">
 
@@ -35,7 +38,7 @@ const ReceptionCatering = () => {
 
         <div>
           <h2 className="text-3xl font-bold mb-4">
-            Elegant Reception Catering
+             Reception Catering
           </h2>
 
           <p className="text-gray-600 leading-relaxed">

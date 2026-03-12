@@ -1,5 +1,6 @@
 
 
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const servicesData = {
@@ -56,6 +57,9 @@ const ProfileDetail = () => {
       </div>
     );
   }
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
   return (
     <div className="pt-28 px-6 max-w-6xl mx-auto">

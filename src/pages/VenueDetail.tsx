@@ -149,6 +149,7 @@
 
 // export default VenueDetail;
 
+import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 const venueData = {
@@ -201,6 +202,9 @@ const VenueDetail = () => {
       </div>
     );
 
+    useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   return (
     <div className="bg-gray-50 min-h-screen">
 

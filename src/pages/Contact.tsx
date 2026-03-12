@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -22,6 +22,9 @@ const Contact = () => {
       (e.target as HTMLFormElement).reset();
     }, 1000);
   };
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
   return (
     <>
@@ -57,7 +60,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground text-sm">Phone</p>
-                    <p className="text-muted-foreground text-sm">+91 98765 43210</p>
+                    <p className="text-muted-foreground text-sm">+91 93030 99808</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -75,7 +78,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground text-sm">Location</p>
-                    <p className="text-muted-foreground text-sm">New Delhi, India</p>
+                    <p className="text-muted-foreground text-sm">Bhopal, India</p>
                   </div>
                 </div>
               </div>
@@ -115,7 +118,7 @@ const Contact = () => {
           </div>
 
           {/* Map */}
-          <div className="mt-16 rounded-lg overflow-hidden border border-border">
+          {/* <div className="mt-16 rounded-lg overflow-hidden border border-border">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.54004883842!2d77.04417384263488!3d28.52725824423498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1709901234567!5m2!1sen!2sin"
               width="100%"
@@ -126,7 +129,19 @@ const Contact = () => {
               referrerPolicy="no-referrer-when-downgrade"
               title="Brij Bhog Catering Location"
             />
-          </div>
+          </div> */}
+          <div className="mt-16 rounded-lg overflow-hidden border border-border">
+  <iframe
+    src="https://www.google.com/maps?q=Bhopal,Madhya%20Pradesh&output=embed"
+    width="100%"
+    height="400"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Brij Bhog Catering Location"
+  />
+</div>
         </div>
       </section>
     </>

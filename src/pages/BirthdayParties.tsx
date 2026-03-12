@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const BirthdayParties = () => {
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   return (
     <div className="w-full">
 

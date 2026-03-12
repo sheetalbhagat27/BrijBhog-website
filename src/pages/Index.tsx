@@ -12,6 +12,7 @@ const Index = () => {
     <>
       <HeroSection />
       <WhatWeOffer/>
+      {/* <ServicesPreview /> //top Notched */}
       <AboutPreview />
       <WhyChooseUs />
       <TasteOfTemple/>

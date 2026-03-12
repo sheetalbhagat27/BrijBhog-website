@@ -27,7 +27,7 @@ const Socialcon = () => {
 
       {/* Facebook */}
       <a
-        href="https://facebook.com/yourusername"
+        href="https://www.facebook.com/profile.php?id=61588300631473"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-blue-600 p-3 rounded-full text-white shadow-lg hover:scale-110 transition"
