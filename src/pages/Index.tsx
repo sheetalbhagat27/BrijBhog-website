@@ -6,10 +6,12 @@ import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
 import TasteOfTemple from "./TastOfTemple";
 import WhatWeOffer from "@/components/WhatWeOffer";
+import Login from "./Login";
 
 const Index = () => {
   return (
     <>
+      <Login/>
       <HeroSection />
       <WhatWeOffer/>
       {/* <ServicesPreview /> //top Notched */}
