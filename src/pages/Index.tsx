@@ -11,7 +11,6 @@ const Index = () => {
   return (
     <>
       <HeroSection />
-      {/* <ServicesPreview /> */}
       <WhatWeOffer/>
       <AboutPreview />
       <WhyChooseUs />

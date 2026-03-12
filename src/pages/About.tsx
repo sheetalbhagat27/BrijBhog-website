@@ -4,7 +4,6 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 import aboutImg from "@/assets/about-us.jpg";
 import Testimonials from "@/components/Testimonials";
 import EventGallery from "@/components/EventGallary";
-import WhatWeOffer from "@/components/WhatWeOffer";
 
 const values = [
   "Premium quality ingredients sourced locally",
