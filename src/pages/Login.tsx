@@ -188,8 +188,7 @@ const Login = () => {
 
         <button
   onClick={() => setOpen(false)}
-  className="absolute top-10 right-4 bg-white w-9 h-9 rounded-full flex items-center justify-center shadow-md text-xl font-bold z-50 hover:bg-gray-100"
->
+className="absolute top-16 md:top-6 right-4 bg-white w-9 h-9 rounded-full flex items-center justify-center shadow-md text-xl font-bold z-50 hover:bg-gray-100">
   ✕
 </button>
 
