@@ -7,12 +7,13 @@ import CTASection from "@/components/CTASection";
 import TasteOfTemple from "./TastOfTemple";
 import WhatWeOffer from "@/components/WhatWeOffer";
 import Login from "./Login";
-
+import ClientTemplate from "../pages/ClientTemplate";
 const Index = () => {
   return (
     <>
       <Login/>
       <HeroSection />
+      
       <WhatWeOffer/>
       {/* <ServicesPreview /> //top Notched */}
       <AboutPreview />

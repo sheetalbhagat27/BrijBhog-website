@@ -30,7 +30,7 @@ const About = () => {
         <div className="absolute inset-0 bg-black/60"></div>
 
         <h1 className="text-5xl font-semibold relative z-10">
-          About Brij Bhog
+          Brij Bhog
         </h1>
       </div>
 

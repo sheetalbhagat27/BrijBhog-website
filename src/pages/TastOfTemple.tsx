@@ -21,6 +21,69 @@ const TastOfTemple = () => {
       </div>
 
       {/* Highlights Section */}
+      {/* <div className="max-w-5xl mx-auto border rounded-lg p-6 shadow-sm mb-12">
+        <h2 className="text-xl font-semibold mb-4">
+          ✨ Our Catering Highlights
+        </h2>
+
+        <ul className="space-y-2 text-gray-600">
+          <li>
+            <strong>100% Pure Vegetarian Menu:</strong> Authentic Indian
+            cuisine prepared with fresh ingredients.
+          </li>
+
+          <li>
+            <strong>Customized Event Menus:</strong> Menus designed according
+            to your event type and guest preferences.
+          </li>
+
+          <li>
+            <strong>Elegant Buffet Setup:</strong> Beautiful buffet counters
+            with attractive food presentation.
+          </li>
+
+          <li>
+            <strong>Live Food Counters:</strong> Chaat, South Indian, Chinese
+            and dessert counters for guests.
+          </li>
+
+          <li>
+            <strong>Professional Catering Staff:</strong> Experienced team
+            ensuring smooth service for every event.
+          </li>
+
+          <li>
+            <strong>Event Catering Services:</strong> Weddings, birthdays,
+            receptions, corporate events and family functions.
+          </li>
+        </ul>
+      </div> */}
+
+      {/* Image Gallery */}
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 mb-12">
+
+        <img
+          src="https://images.unsplash.com/photo-1555244162-803834f70033"
+          alt="Catering Food"
+          className="rounded-lg shadow-md"
+        />
+
+        <img
+          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+          alt="Buffet Setup"
+          className="rounded-lg shadow-md"
+        />
+
+        <img
+          src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3"
+          alt="Event Catering"
+          className="rounded-lg shadow-md"
+        />
+
+      </div>
+
+
+
       <div className="max-w-5xl mx-auto border rounded-lg p-6 shadow-sm mb-12">
         <h2 className="text-xl font-semibold mb-4">
           ✨ Our Catering Highlights
@@ -59,31 +122,9 @@ const TastOfTemple = () => {
         </ul>
       </div>
 
-      {/* Image Gallery */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 mb-12">
-
-        <img
-          src="https://images.unsplash.com/photo-1555244162-803834f70033"
-          alt="Catering Food"
-          className="rounded-lg shadow-md"
-        />
-
-        <img
-          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
-          alt="Buffet Setup"
-          className="rounded-lg shadow-md"
-        />
-
-        <img
-          src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3"
-          alt="Event Catering"
-          className="rounded-lg shadow-md"
-        />
-
-      </div>
 
       {/* Why Choose Section */}
-      <div className="max-w-5xl mx-auto mb-10">
+      {/* <div className="max-w-5xl mx-auto mb-10">
         <h2 className="text-xl font-semibold mb-3">
           ⭐ Why Choose Brij Bhog Catering?
         </h2>
@@ -99,7 +140,7 @@ const TastOfTemple = () => {
           Choose Brij Bhog Catering for delicious food, reliable service
           and memorable celebrations.
         </p>
-      </div>
+      </div> */}
 
       {/* Contact Section */}
       <div className="max-w-5xl mx-auto border rounded-lg p-6 shadow-sm">

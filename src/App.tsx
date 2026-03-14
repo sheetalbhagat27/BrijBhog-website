@@ -24,6 +24,7 @@ import ReceptionCatering from "./pages/ReceptionCatering";
 import OutdoorPage from "./pages/OutdoorPage";
 import Socialcon from "./components/Socialcon";
 import Blog from "./pages/Blog";
+import MenuPlanning from "./pages/MenuPlanning";
 
 const queryClient = new QueryClient();
 
@@ -61,6 +62,7 @@ const App = () => (
         <Route path="/wedding-events" element={<WeddingEvents/>} />
         <Route path="/birthday-parties" element={<BirthdayParties />} />
           <Route path="/blog" element={<Blog />} />
+           <Route path="/Menu-planning" element={<MenuPlanning/>} />
 
             
           </Routes>
