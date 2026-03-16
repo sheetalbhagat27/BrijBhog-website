@@ -15,8 +15,8 @@ const services = [
   { image: receptionCatering, title: "Reception Catering", slug: "reception-catering" },
   { image: outdoorCatering, title: "Outdoor Catering", slug: "outdoor-catering" },
    {image:"https://media.istockphoto.com/photos/catering-food-wedding-event-table-picture-id650655146?k=20&m=650655146&s=612x612&w=0&h=gbGiOeig8Fz2NeKL4RonUcAPQIVqd2B8MDCyf62ugNU=",
-    title:"Menu Planning",
-    slug:"Menu-planning"
+    title:"Social-events",
+    slug:"Social-events"
    }
 ];
 
@@ -41,19 +41,7 @@ const WhatWeOffer = () => {
 
             <Link
               key={service.slug}
-              // to={
-              //   service.slug === "corporate-events"
-              //     ? "/corporate-events"
-              //     : service.slug === "wedding-catering"
-              //     ? "/wedding-events"
-              //     : service.slug === "birthday-parties"
-              //     ? "/birthday-parties"
-              //     : service.slug === "reception-catering"
-              //     ? "/reception-catering"
-              //     : service.slug === "outdoor-catering"
-              //     ? "/outdoor-catering"
-              //     : `/profile/${service.slug}`
-              // }
+              
 
               to={
   service.slug === "corporate-events"
@@ -66,9 +54,9 @@ const WhatWeOffer = () => {
     ? "/reception-catering"
     : service.slug === "outdoor-catering"
     ? "/outdoor-catering"
-    : service.slug === "menu-planning"
-    ? "/Menu-planning"
-    : "/Menu-planning"
+    : service.slug === "Social-events"
+    ? "/Social-events"
+    : "/Social-events"
 }
               className="group bg-background border border-border rounded-lg overflow-hidden card-hover h-full cursor-pointer block"
             >

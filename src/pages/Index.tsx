@@ -8,15 +8,17 @@ import TasteOfTemple from "./TastOfTemple";
 import WhatWeOffer from "@/components/WhatWeOffer";
 import Login from "./Login";
 import ClientTemplate from "../pages/ClientTemplate";
+import ImageSlider from "./ImageSlider";
 const Index = () => {
   return (
     <>
       <Login/>
       <HeroSection />
+      {/* <ImageSlider/> */}
       
       <WhatWeOffer/>
       {/* <ServicesPreview /> //top Notched */}
-      <AboutPreview />
+      {/* <AboutPreview /> */}
       <WhyChooseUs />
       <TasteOfTemple/>
       <Testimonials />

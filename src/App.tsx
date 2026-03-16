@@ -25,6 +25,7 @@ import OutdoorPage from "./pages/OutdoorPage";
 import Socialcon from "./components/Socialcon";
 import Blog from "./pages/Blog";
 import MenuPlanning from "./pages/MenuPlanning";
+import SocialEventsCatering from "./pages/SocialEventsCatering";
 
 const queryClient = new QueryClient();
 
@@ -34,15 +35,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter 
-        // future={{
-        //   v7_startTransition: true,
-        //   v7_relativeSplatPath: true,
-        //   v7_prependNavCurrentMatch: true,
-        //   v7_normalizeFormMethod: true,
-        //   v7_fetcherPersist: true,
-        //   v7_partialHydration: true,
-        //   v7_skipActionErrorRevalidation: true
-        // }}
+       
       >
         <Navbar />
         <main>
@@ -62,7 +55,7 @@ const App = () => (
         <Route path="/wedding-events" element={<WeddingEvents/>} />
         <Route path="/birthday-parties" element={<BirthdayParties />} />
           <Route path="/blog" element={<Blog />} />
-           <Route path="/Menu-planning" element={<MenuPlanning/>} />
+           <Route path="/Social-events" element={<SocialEventsCatering/>} />
 
             
           </Routes>

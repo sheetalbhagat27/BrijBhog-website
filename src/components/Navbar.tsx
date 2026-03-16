@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Logo from "@/assets/Logo2.png";
+import Logo from "@/assets/Logo7.jpg";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -19,12 +19,12 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border">
       <div className="container-wide flex items-center justify-between h-16 md:h-20 px-4 sm:px-6 lg:px-8">
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src={Logo} alt="Brij Bhog Logo" className="h-14 object-contain" />
+          <img src={Logo} alt="Brij Bhog Logo" className="h-20 object-contain" />
         </Link>
 
         {/* Desktop Nav */}
