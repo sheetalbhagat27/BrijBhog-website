@@ -9,9 +9,20 @@ import WhatWeOffer from "@/components/WhatWeOffer";
 import Login from "./Login";
 import ClientTemplate from "../pages/ClientTemplate";
 import ImageSlider from "./ImageSlider";
+import { useState } from "react";
+import Loader from "./Loader";
 const Index = () => {
+
+
+  const [showVideo, setShowVideo] = useState(true);  // 👈 yeh add karo
+
   return (
     <>
+
+    {/* Video pehle chalega, khatam hone par gayab */}
+      {showVideo && (
+        <Loader onComplete={() => setShowVideo(false)} />
+      )}
       <Login/>
       <HeroSection />
       {/* <ImageSlider/> */}
