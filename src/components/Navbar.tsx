@@ -113,7 +113,7 @@ const Navbar = () => {
       <div className="container-wide flex items-center justify-between h-16 md:h-20 px-4 sm:px-6 lg:px-8">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
+        {/* <Link to="/" className="flex items-center gap-2">
           <img
             src={Logo}
             alt="Brij Bhog Logo"
@@ -127,7 +127,27 @@ const Navbar = () => {
               object-contain
             "
           />
-        </Link>
+        </Link> */}
+        {/* Logo */}
+<Link to="/" className="flex items-center gap-2">
+  <img
+    src={Logo}
+    alt="Brij Bhog Logo"
+    className="
+      w-auto
+      h-auto
+
+      max-h-14        /* mobile */
+      sm:max-h-16     /* small */
+      md:max-h-20     /* tablet */
+      lg:max-h-24     /* desktop */
+      xl:max-h-28     /* large screens */
+
+      object-contain
+      transition-all duration-300
+    "
+  />
+</Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
