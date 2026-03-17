@@ -137,7 +137,7 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center">
       
       {/* Video */}
       <video
