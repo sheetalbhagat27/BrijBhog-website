@@ -94,7 +94,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Logo from "@/assets/Logo7.jpg";
+import Logo from "@/assets/Logo9.jpg";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -131,22 +131,18 @@ const Navbar = () => {
         {/* Logo */}
 <Link to="/" className="flex items-center gap-2">
   <img
-    src={Logo}
-    alt="Brij Bhog Logo"
-    className="
-      w-auto
-      h-auto
+  src={Logo}
+  alt="Brij Bhog Logo"
+  className="
+    h-10        /* mobile */
+    sm:h-12
+    md:h-14
+    lg:h-16
 
-      max-h-14        /* mobile */
-      sm:max-h-16     /* small */
-      md:max-h-20     /* tablet */
-      lg:max-h-24     /* desktop */
-      xl:max-h-28     /* large screens */
-
-      object-contain
-      transition-all duration-300
-    "
-  />
+    w-auto
+    object-contain
+  "
+/>
 </Link>
 
         {/* Desktop Nav */}

@@ -13,28 +13,26 @@ import { useState } from "react";
 import Loader from "./Loader";
 const Index = () => {
 
-
-  const [showVideo, setShowVideo] = useState(true);  // 👈 yeh add karo
-
+// 👈 yeh add karo
+   const [showVideo, setShowVideo] = useState(true);
   return (
     <>
-
-    {/* Video pehle chalega, khatam hone par gayab */}
       {showVideo && (
         <Loader onComplete={() => setShowVideo(false)} />
       )}
-      <Login/>
-      <HeroSection />
-      {/* <ImageSlider/> */}
-      
-      <WhatWeOffer/>
-      {/* <ServicesPreview /> //top Notched */}
-      {/* <AboutPreview /> */}
-      <WhyChooseUs />
-      <TasteOfTemple/>
-      <Testimonials />
 
-      <CTASection />
+      {/* 👇 Jab loader hide hoga tab ye sab dikhega */}
+      {!showVideo && (
+        <>
+          <Login/>
+          <HeroSection />
+          <WhatWeOffer/>
+          <WhyChooseUs />
+          <TasteOfTemple/>
+          <Testimonials />
+          <CTASection />
+        </>
+      )}
     </>
   );
 };

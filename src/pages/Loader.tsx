@@ -1,120 +1,24 @@
-// // // import { useState } from "react";
-// // // import Video from "../assets/Flow_delpmaspu_ (2).mp4"
-// // // const Loader = ({ onComplete }: { onComplete: () => void }) => {
-// // //   return (
-// // //     <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
-// // //       <video
-// // //         src={Video}   // 👈 apna video ka naam yahan likho
-// // //         autoPlay
-// // //         muted
-// // //         playsInline
-// // //         onEnded={onComplete}           // video khatam hote hi gayab ho jaayega
-// // //         className="w-full h-full object-cover"
-// // //       />
-
-// // //       {/* Optional: Skip button */}
-// // //       <button
-// // //         onClick={onComplete}
-// // //         className="absolute bottom-8 right-8 text-white border border-white px-4 py-2 rounded text-sm hover:bg-white hover:text-black transition"
-// // //       >
-// // //         Skip →
-// // //       </button>
-// // //     </div>
-// // //   );
-// // // };
-
-// // // export default Loader;
-
-// // import { useEffect, useRef } from "react";
-// // import Video from "../assets/Flow_delpmaspu_ (2).mp4";
-
-// // const Loader = ({ onComplete }: { onComplete: () => void }) => {
-// //   const videoRef = useRef<HTMLVideoElement>(null);
-
-// //   useEffect(() => {
-// //     if (videoRef.current) {
-// //       videoRef.current.playbackRate = 2; // 👈 2x speed — aur fast chahiye toh 3 ya 4 karo
-// //     }
-// //   }, []);
-
-// //   return (
-// //     <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
-// //       <video
-// //         ref={videoRef}              // 👈 ref attach kiya
-// //         src={Video}
-// //         autoPlay
-// //         muted
-// //         playsInline
-// //         onEnded={onComplete}
-// //         className="w-full h-full object-cover"
-// //       />
-
-// //       {/* Skip button */}
-// //       <button
-// //         onClick={onComplete}
-// //         className="absolute bottom-8 right-8 text-white border border-white px-4 py-2 rounded text-sm hover:bg-white hover:text-black transition"
-// //       >
-// //         Skip →
-// //       </button>
-// //     </div>
-// //   );
-// // };
-
-// // export default Loader;
-
 // import { useEffect, useRef } from "react";
 // import Video from "../assets/Flow_delpmaspu_ (2).mp4";
 
-// const Loader = ({ onComplete }: { onComplete: () => void }) => {
-//   const videoRef = useRef<HTMLVideoElement>(null);
-
-//   useEffect(() => {
-//     if (videoRef.current) {
-//       videoRef.current.playbackRate = 2;
-//     }
-//   }, []);
+// const Loader = ({}) => {
+ 
 
 //   return (
-//     <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center overflow-hidden">
-      
-//       {/* Video */}
+//     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black">
 //       <video
-//         ref={videoRef}
+//         key="loader-video" // Add key to prevent remounting
 //         src={Video}
 //         autoPlay
 //         muted
 //         playsInline
-//         onEnded={onComplete}
-//         className="
-//           w-full h-full object-cover
-//           sm:object-cover
-//           md:object-cover
-//         "
+//         // onEnded={handleEnd}
+//         className="w-full h-full object-contain"
 //       />
 
-//       {/* Overlay (optional for better visibility) */}
-//       <div className="absolute inset-0 bg-black/20" />
-
-//       {/* Skip Button */}
 //       <button
-//         onClick={onComplete}
-//         className="
-//           absolute 
-//           bottom-4 right-4 
-//           sm:bottom-6 sm:right-6 
-//           md:bottom-8 md:right-8
-          
-//           text-white 
-//           border border-white 
-//           px-3 py-1.5 
-//           sm:px-4 sm:py-2 
-          
-//           text-xs sm:text-sm md:text-base
-          
-//           rounded 
-//           hover:bg-white hover:text-black 
-//           transition
-//         "
+//         // onClick={handleEnd}
+//         className="absolute bottom-4 right-4 text-white border border-white px-3 py-2 text-sm rounded hover:bg-white hover:text-black transition"
 //       >
 //         Skip →
 //       </button>
@@ -124,36 +28,34 @@
 
 // export default Loader;
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Video from "../assets/Flow_delpmaspu_ (2).mp4";
 
-const Loader = ({ onComplete }: { onComplete: () => void }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
+const Loader = ({ onComplete }) => {
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 2;
-    }
-  }, []);
+    // fallback: agar video fail ho jaye to bhi hide ho jaye
+    const timer = setTimeout(() => {
+      onComplete();
+    }, 3000); // 4 sec loader
+
+    return () => clearTimeout(timer);
+  }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center">
-      
-      {/* Video */}
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black">
       <video
-        ref={videoRef}
         src={Video}
         autoPlay
         muted
         playsInline
-        onEnded={onComplete}
-        className="w-full h-full object-contain"   // 🔥 yahi main fix hai
+        // onEnded={onComplete} // ✅ video khatam hote hi hide
+        className="w-full h-full object-contain"
       />
 
-      {/* Skip Button */}
       <button
-        onClick={onComplete}
-        className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 text-white border border-white px-3 py-2 text-sm rounded hover:bg-white hover:text-black transition"
+        onClick={onComplete} // ✅ skip button
+        className="absolute bottom-4 right-4 text-white border border-white px-3 py-2 text-sm rounded hover:bg-white hover:text-black transition"
       >
         Skip →
       </button>
