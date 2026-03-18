@@ -1,32 +1,4 @@
-// import { useEffect, useRef } from "react";
-// import Video from "../assets/Flow_delpmaspu_ (2).mp4";
 
-// const Loader = ({}) => {
- 
-
-//   return (
-//     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black">
-//       <video
-//         key="loader-video" // Add key to prevent remounting
-//         src={Video}
-//         autoPlay
-//         muted
-//         playsInline
-//         // onEnded={handleEnd}
-//         className="w-full h-full object-contain"
-//       />
-
-//       <button
-//         // onClick={handleEnd}
-//         className="absolute bottom-4 right-4 text-white border border-white px-3 py-2 text-sm rounded hover:bg-white hover:text-black transition"
-//       >
-//         Skip →
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Loader;
 
 import { useEffect } from "react";
 import Video from "../assets/Flow_delpmaspu_ (2).mp4";
@@ -37,7 +9,7 @@ const Loader = ({ onComplete }) => {
     // fallback: agar video fail ho jaye to bhi hide ho jaye
     const timer = setTimeout(() => {
       onComplete();
-    }, 3000); // 4 sec loader
+    }, 5000); // 4 sec loader
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -49,7 +21,7 @@ const Loader = ({ onComplete }) => {
         autoPlay
         muted
         playsInline
-        // onEnded={onComplete} // ✅ video khatam hote hi hide
+        onEnded={onComplete} // ✅ video khatam hote hi hide
         className="w-full h-full object-contain"
       />
 

@@ -13,26 +13,23 @@ import { useState } from "react";
 import Loader from "./Loader";
 const Index = () => {
 
-// 👈 yeh add karo
-   const [showVideo, setShowVideo] = useState(true);
+  const [showVideo, setShowVideo] = useState(true);
+
   return (
     <>
+      {/* 👇 Loader sirf overlay hai */}
       {showVideo && (
         <Loader onComplete={() => setShowVideo(false)} />
       )}
 
-      {/* 👇 Jab loader hide hoga tab ye sab dikhega */}
-      {!showVideo && (
-        <>
-          <Login/>
-          <HeroSection />
-          <WhatWeOffer/>
-          <WhyChooseUs />
-          <TasteOfTemple/>
-          <Testimonials />
-          <CTASection />
-        </>
-      )}
+      {/* 👇 Content hamesha render rahega */}
+      <Login/>
+      <HeroSection />
+      <WhatWeOffer/>
+      <WhyChooseUs />
+      <TasteOfTemple/>
+      <Testimonials />
+      <CTASection />
     </>
   );
 };
