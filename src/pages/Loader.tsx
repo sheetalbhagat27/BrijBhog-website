@@ -9,7 +9,7 @@ const Loader = ({ onComplete }) => {
     // fallback: agar video fail ho jaye to bhi hide ho jaye
     const timer = setTimeout(() => {
       onComplete();
-    }, 5000); // 4 sec loader
+    }, 9000); // 4 sec loader
 
     return () => clearTimeout(timer);
   }, [onComplete]);
